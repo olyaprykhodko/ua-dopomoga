@@ -1,0 +1,50 @@
+---
+import Layout from '../../layouts/Layout.astro'
+
+import { getCollection } from 'astro:content';
+
+export async function getStaticPaths() {
+  const posts = await getCollection('posts');
+  return posts.map(post => ({
+    params: { slug: post.slug},
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+
+const formattedDate = new Date(post.data.date).toLocaleDateString('uk-UA', {
+  year: 'numeric',
+  month: 'long',
+  day: 'numeric'
+});
+
+let Content;
+try {
+  const rendered = await post.render();
+  Content = rendered.Content;
+} catch (error) {
+  console.error('Error rendering post:', error);
+}
+---
+
+<Layout title={post.data.title}>
+  <article class="bs-container py-16">
+    <header class="mb-12">
+      <div class="mb-6 text-bs-foreground-dark">
+        {formattedDate}
+      </div>
+      <h1 class="bs-h1 mb-8">{post.data.title}</h1>
+      
+      <img 
+        src={post.data.image} 
+        alt={post.data.image_alt} 
+        class="w-full aspect-video object-cover mb-12 rounded-lg"
+      />
+    </header>
+    
+    <main class="bs-body-text xl:text-lg">
+      {Content ? <Content /> :< div set:html={post.body} />}
+    </div>
+  </article>
+</Layout>

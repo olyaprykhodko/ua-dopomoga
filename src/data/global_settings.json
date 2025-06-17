@@ -1,0 +1,35 @@
+{
+  "title": "UAdopomoga",
+  "description": "Формуємо культуру волонтерства та взаємодопомоги в Україні",
+  "social_image": "",
+  "base_url": "",
+  "demo": {
+    "title": "Volunteers Kharkiv?",
+    "content": "Приймай участь у розвитку волонтерського руху",
+    "cta": "Підтримати"
+  },
+  "theme_color": "#18181b",
+
+  "social_links": [
+    {
+      "title": "Twitter / X",
+      "link": "https://x.com/blackspikeltd/"
+    },
+    {
+      "title": "Mastodon",
+      "link": "https://mastodon.cloud/@blackspike"
+    },
+    {
+      "title": "GitHub",
+      "link": "https://github.com/blackspike/"
+    },
+    {
+      "title": "LinkedIn",
+      "link": "https://www.linkedin.com/company/blackspike"
+    },
+    {
+      "title": "Bluesky",
+      "link": "https://bsky.app/profile/blackspike.com/"
+    }
+  ]
+}

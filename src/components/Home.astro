@@ -1,0 +1,25 @@
+---
+import home_content from '../data/home.json'
+const {title = home_content.title, content = home_content.content} = Astro.props
+---
+
+<section class="bs-container py-6 flex flex-col lg:flex-row items-center">
+
+  <!-- Content -->
+  <div class="flex flex-col gap-6 lg:max-w-lg w-full py-16">
+
+    <!-- Title -->
+    <h1 class="bs-h1" set:html={ title } />
+
+    <!-- Content -->
+    <div class="bs-body-text xl:text-xl flex flex-col gap-4 [&_p]:last:text-bs-foreground-dark" set:html={content} />
+
+    <!-- CTA -->
+    <button type="button" class="bs-btn self-start bs-mt-sm" onclick="demo.showModal()">
+    </button>
+
+  </div>
+
+
+
+</section>

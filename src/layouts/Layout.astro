@@ -1,22 +1,58 @@
-<!doctype html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro Basics</title>
-	</head>
-	<body>
-		<slot />
+---
+import '../assets/css/global.css'
+import '../assets/css/base.css'
+import '../assets/css/layout.css'
+import '../assets/css/text.css'
+
+import global_settings from '../data/global_settings.json'
+
+import { Font } from 'astro:assets'
+
+import Image from 'astro/components/Image.astro'
+import bg_image from '../assets/bg-image.webp'
+import Header from '../components/Header.astro'
+
+const {title, description} = Astro.props
+---
+<html lang="ua">
+
+  <head>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>UAdopomoga</title>
+
+    <link rel="icon" type="image/webp" href="/favicon.webp" />
+    <link rel="manifest" href="/manifest.json" />
+
+
+    <meta name="theme-color" content='#18181b' />
+
+	<meta name="description" content={ description ?? global_settings.description } />
+    <meta name="theme-color" content={ global_settings.theme_color } />
+
+    <meta property="og:title" content={ title ?? global_settings.title } />
+    <meta property="og:description" content={ description ?? global_settings.description } />
+
+
+    <Font cssVariable="--font-inter" preload />
+    <Font cssVariable="--font-inter-display" preload />
+
+  </head>
+
+	<body id="top">
+		
+		<Image src={bg_image} alt="" format="webp" height={1080} width={1920} class="absolute min-h-svh object-cover inset-0 bottom-auto -z-1 w-full h-auto opacity-40 mask-b-from-50%" />
+
+		<Header></Header>
+
+		<main id="main">
+			<slot 
+		/>
+		</main>
+		
 	</body>
 </html>
 
-<style>
-	html,
-	body {
-		margin: 0;
-		width: 100%;
-		height: 100%;
-	}
-</style>
+
