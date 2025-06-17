@@ -12,9 +12,12 @@ export async function getAllPosts() {
       return {
         title: post.data.title,
         content: post.body,
-        image: post.image,
+        image: Array.isArray(post.data.image)
+          ? [...post.data.image]
+          : post.data.image,
         image_alt: post.data.image_alt,
         background_image: post.data.background_image,
+        background_image_alt: post.data.background_image_alt,
         date: post.data.date.toISOString().split('T')[0],
         cta: post.data.cta || 'Читати далі',
         slug: post.slug,

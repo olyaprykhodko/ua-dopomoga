@@ -1,8 +1,14 @@
 ---
 title: 'Доставка ліків у віддалені райони'
-image: '/images/posts/medicine-delivery.jpg'
+image:
+  [
+    '/content-images/posts/new-posts/test.jpg',
+    '/content-images/posts/new-posts/test_2.jpg',
+  ]
 image_alt: 'Волонтери з медикаментами'
 date: 2024-06-12
+background_image: '/content-images/posts/new-posts/test.jpg'
+background_image_alt: 'Medicals'
 cta: 'Допомогти проекту'
 ---
 

@@ -4,9 +4,10 @@ const postsCollection = defineCollection({
   type: 'content',
   schema: z.object({
     title: z.string(),
-    image: z.string(),
+    image: z.array(z.string()),
     image_alt: z.string(),
     background_image: z.string().optional(),
+    background_image_alt: z.string(),
     date: z.coerce.date(),
     category: z.string().optional(),
     cta: z.string().optional(),

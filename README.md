@@ -68,8 +68,9 @@ ua-dopomoga/
    _After uploading, make sure to click "Commit changes" at the bottom to save the images and the folder._
 4. Go to the `src/content/posts` directory.
 5. Click the "Add file" button and select "Create new file".
-6. Name your file with a `.md` extension (e.g., `new-post.md`).
-7. Add your frontmatter and content using the template below.
+6. Fill all the necessary fields as on the template below
+7. Name your file with a `.md` extension (e.g., `new-post.md`).
+8. Add your frontmatter and content using the template below.
 
 #### Post Template
 
@@ -77,11 +78,14 @@ ua-dopomoga/
 ---
 title: 'Title of your post'
 images:
-    - src: '/content-images/posts/new-posts/image1.jpg'
-        alt: 'Description of image 1'
-    - src: '/content-images/posts/new-posts/image2.jpg'
-        alt: 'Description of image 2'
+  - src: '/content-images/posts/new-posts/image1.jpg'
+    alt: 'Description of image 1'
+  - src: '/content-images/posts/new-posts/image2.jpg'
+    alt: 'Description of image 2'
 date: YYYY-MM-DD
+background_image:
+  src: '/content-images/posts/new-posts/image1.jpg'
+  alt: 'Description of image 1'
 cta: 'Дізнатись більше'
 ---
 
