@@ -104,7 +104,6 @@ You can reference these images in your content using standard Markdown syntax:
 
 [Link text](https://example.com)
 
-````
 
 ### Adding Images
 
