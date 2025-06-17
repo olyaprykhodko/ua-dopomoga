@@ -1,8 +1,9 @@
 ---
-Hello
-''
-2025-06-17
-Дізнатись більше
+title: "Hello"
+image: ''
+image_alt: ''
+date: '2025-06-17'
+cta: 'Дізнатись більше'
 ---
 
-Lorem ipsum
+Lorem ipsum kmgblkrwtmbfdl c,m leqrbfkdlf,rebf
