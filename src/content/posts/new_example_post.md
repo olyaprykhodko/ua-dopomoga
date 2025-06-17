@@ -1,3 +1,4 @@
+---
 title: 'Доставка ліків у віддалені райони'
 image: '/images/posts/medicine-delivery.jpg'
 image_alt: 'Волонтери з медикаментами'
